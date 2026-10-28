@@ -23,7 +23,13 @@
     nav{max-width:var(--max);margin:auto;padding:18px 28px;display:flex;align-items:center;justify-content:space-between;gap:24px}
     .brand{display:flex;align-items:center;gap:12px;font-family:'Space Grotesk',sans-serif;font-weight:700;letter-spacing:.04em}
     .brand-mark{width:39px;height:39px;border:1px solid rgba(101,228,255,.65);border-radius:12px;display:grid;place-items:center;color:var(--cyan);font-size:20px;box-shadow:inset 0 0 18px rgba(101,228,255,.09),0 0 22px rgba(101,228,255,.08)}
-    .brand-logo{display:block;width:clamp(100px,10vw,150px);height:58px;object-fit:contain;mix-blend-mode:screen;filter:drop-shadow(0 2px 8px rgba(0,0,0,.22))}
+    .brand-logo{display:block;width:clamp(42px,4.2vw,58px);height:48px;object-fit:contain;mix-blend-mode:screen;filter:drop-shadow(0 2px 8px rgba(0,0,0,.22))}
+    .brand-name{display:block;color:#f3f7ff;font:700 13px/1.2 'Space Grotesk',sans-serif;letter-spacing:.08em;white-space:nowrap}
+    .brand-name small{display:block;color:#a9bdd8;font:500 8px/1.5 'DM Sans',sans-serif;letter-spacing:.25em;margin-top:3px}
+    .footer-identity{display:flex;align-items:center;gap:14px;min-width:0}
+    .footer-logo{display:block;width:64px;height:64px;object-fit:contain;mix-blend-mode:screen}
+    .footer-identity>span{display:flex;flex-direction:column;gap:5px}
+    .footer-tagline{color:#8fa2bb;font-size:11px}
     .brand small{display:block;color:#a9bdd8;font:500 9px 'DM Sans',sans-serif;letter-spacing:.23em;margin-top:-3px}
     .nav-links{display:flex;align-items:center;gap:27px;font-size:13px;color:#d4dfef}
     .nav-links a{transition:color .2s}.nav-links a:hover{color:var(--cyan)}
@@ -76,7 +82,7 @@
     .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
     .reveal.visible{opacity:1;transform:translateY(0)}
     @media(max-width:800px){.nav-links{display:none;position:absolute;top:76px;left:16px;right:16px;padding:20px;background:rgba(5,11,24,.97);border:1px solid var(--line);border-radius:12px;flex-direction:column;align-items:stretch;gap:0}.nav-links.open{display:flex}.nav-links a{display:block;padding:12px 5px}.nav-cta{display:none}.menu-toggle{display:block}.hero{background-position:58% center}.hero-content{padding-top:150px}.hero-copy{font-size:15px}.scroll-note{display:none}.section-top{align-items:start;flex-direction:column}.focus-grid{grid-template-columns:1fr 1fr}.mission-inner{grid-template-columns:1fr;gap:30px}.mission-art{min-height:260px}}
-    @media(max-width:520px){nav{padding:14px 18px}.brand{font-size:13px}.brand-mark{width:35px;height:35px}.brand-logo{width:112px;height:48px}.hero-content{padding:135px 20px 120px}h1{font-size:48px}.hero-copy{font-size:14px}.hero-index{left:20px}.section{padding:72px 20px}.focus-grid{grid-template-columns:1fr}.focus-card{min-height:220px}.mission-inner{padding:60px 20px}.cta{padding:70px 20px}.footer-inner{align-items:flex-start;flex-direction:column}.footer-links{gap:15px}}
+    @media(max-width:520px){nav{padding:14px 18px}.brand{font-size:13px;gap:8px}.brand-mark{width:35px;height:35px}.brand-logo{width:38px;height:40px}.brand-name{font-size:10px;letter-spacing:.05em}.brand-name small{font-size:7px;letter-spacing:.16em}.footer-logo{width:52px;height:52px}.hero-content{padding:135px 20px 120px}h1{font-size:48px}.hero-copy{font-size:14px}.hero-index{left:20px}.section{padding:72px 20px}.focus-grid{grid-template-columns:1fr}.focus-card{min-height:220px}.mission-inner{padding:60px 20px}.cta{padding:70px 20px}.footer-inner{align-items:flex-start;flex-direction:column}.footer-links{gap:15px}}
     @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}.reveal{opacity:1;transform:none}}
   </style>
 </head>
@@ -85,6 +91,7 @@
     <nav aria-label="Main navigation">
       <a class="brand" href="#home" aria-label="Eagle Crest Aerospace home">
         <img class="brand-logo" src="eagle%20crest%20aerospce%20logo.png" alt="Eagle Crest Aerospace logo">
+        <span class="brand-name">EAGLE CREST<small>A E R O S P A C E</small></span>
       </a>
       <div class="nav-links" id="navLinks">
         <a href="#home">Home</a><a href="#about">About</a><a href="#research">Research</a><a href="#innovation">Innovation</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
@@ -144,7 +151,10 @@
 
   <footer>
     <div class="footer-inner">
-      <div><div class="footer-brand">EAGLE CREST AEROSPACE</div><div>Research · Innovation · Education</div></div>
+      <a class="footer-identity" href="#home" aria-label="Eagle Crest Aerospace home">
+        <img class="footer-logo" src="eagle%20crest%20aerospce%20logo.png" alt="Eagle Crest Aerospace logo">
+        <span><span class="footer-brand">EAGLE CREST AEROSPACE</span><span class="footer-tagline">Research · Innovation · Education</span></span>
+      </a>
       <div class="footer-links"><a href="#home">Home</a><a href="#research">Research</a><a href="#about">About</a><a href="#contact">Contact</a></div>
       <div>© <span id="year"></span> Eagle Crest Aerospace</div>
     </div>
